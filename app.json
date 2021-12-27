@@ -1,0 +1,25 @@
+{
+    "name": "Proper Django Static File Serving",
+    "description": "Using bucketeer with private/public media and static files in Django",
+    "repository": "https://github.com/dstarner/django-heroku-static-file-example",
+    "logo": "https://i0.wp.com/copyassignment.com/wp-content/uploads/2021/08/Django-logo.jpg?fit=474%2C474&ssl=1",
+    "keywords": ["python", "django", "static"],
+    "addons": ["heroku-postgresql:hobby-dev"],
+    "buildpacks": [
+      {"url": "https://github.com/moneymeets/python-poetry-buildpack"},
+      {"url": "heroku/python"}
+    ],
+    "env": {
+        "SECRET_KEY": {
+          "description": "A secret key value required by Django",
+          "generator": "secret"
+        },
+        "DEBUG": {
+            "value": "False"
+        },
+        "DJANGO_SUPERUSER_PASSWORD": {
+            "description": "Used to generate the superuser of username 'test' (test@example.com)",
+            "value": "hunter2"
+        }
+      }
+}
