@@ -1,6 +1,7 @@
 # Django specific
 collected-static
 collected-media
+.vscode
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
